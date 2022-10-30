@@ -22,19 +22,16 @@ FLAGS = -D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++\
 
 FLAGS1 = -fsanitize=address
 
-stacktask: main.o stack_functions.o stackerrors_functions.o
-	g++ main.o stack_functions.o stackerrors.o $(FLAGS) -o stack
+stacktask: main.o stackfunctions.o stackerrors.o
+	g++ main.o stackfunctions.o $(FLAGS) -o stack
 
-main.o: main.cpp
+main.o: main.cpp stackfunctions.h stackerrors.h
 	g++ -c main.cpp $(FLAGS)
 
-stack_functions.o: stack_functions.cpp
-	g++ -c stack_functions.cpp $(FLAGS)
-
-stackerrors_functions.o: stackerrors.cpp
-	g++ -c stackerrors.cpp $(FLAGS)
+stackfunctions.o: stackfunctions.cpp stackfunctions.h stackerrors.h
+	g++ -c stackfunctions.cpp $(FLAGS)
 
 .PHONY: clean
 
 clean:
-	rm -rf *.o stack
+	rm *.o stack
