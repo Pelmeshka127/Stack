@@ -18,20 +18,24 @@ FLAGS = -D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++\
 			   -fsanitize=address,alignment,bool,bounds,enum,float-cast-overflow,\
 			   -fsanitize=float-divide-by-zero,integer-divide-by-zero,nonnull-attribute,null,\
 			   -fsanitize=object-size,return,returns-nonnull-attribute,shift,\
-			   -fsanitize=address,signed-integer-overflow,undefined,unreachable,vla-bound,vptr
+			   -fsanitize=address,signed-integer-overflow,undefined,unreachable,vla-bound,vptr,
 
-FLAGS1 = -fsanitize=address
-
-stacktask: main.o stackfunctions.o stackerrors.o
-	g++ main.o stackfunctions.o $(FLAGS) -o stack
+stacktask: main.o stackfunctions.o stackerrors.o log.o
+	g++ main.o stackfunctions.o stackerrors.o log.o $(FLAGS) -o stack
 
 main.o: main.cpp stackfunctions.h stackerrors.h
 	g++ -c main.cpp $(FLAGS)
 
-stackfunctions.o: stackfunctions.cpp stackfunctions.h stackerrors.h
+stackfunctions.o: stackfunctions.cpp stackfunctions.h stackerrors.h log.h
 	g++ -c stackfunctions.cpp $(FLAGS)
+
+stackerrors.o: stackerrors.cpp stackerrors.h
+	g++ -c stackerrors.cpp $(FLAGS)
+
+log.o: log.cpp log.h stackerrors.h
+	g++ -c log.cpp $(FLAGS)
 
 .PHONY: clean
 
 clean:
-	rm *.o stack
+	rm *.o stackj
