@@ -20,20 +20,23 @@ FLAGS = -D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++\
 			   -fsanitize=object-size,return,returns-nonnull-attribute,shift,\
 			   -fsanitize=address,signed-integer-overflow,undefined,unreachable,vla-bound,vptr,
 
-stacktask: main.o stackfunctions.o stackerrors.o log.o
-	g++ main.o stackfunctions.o stackerrors.o log.o $(FLAGS) -o stack
+stacktask: main.o stack.o debug.o log.o hash.o
+	g++ main.o stack.o debug.o log.o hash.o $(FLAGS) -o stack
 
-main.o: main.cpp stackfunctions.h stackerrors.h
+main.o: main.cpp stack.h debug.h
 	g++ -c main.cpp $(FLAGS)
 
-stackfunctions.o: stackfunctions.cpp stackfunctions.h stackerrors.h log.h
-	g++ -c stackfunctions.cpp $(FLAGS)
+stack.o: stack.cpp stack.h debug.h log.h
+	g++ -c stack.cpp $(FLAGS)
 
-stackerrors.o: stackerrors.cpp stackerrors.h
-	g++ -c stackerrors.cpp $(FLAGS)
+debug.o: debug.cpp debug.h
+	g++ -c debug.cpp $(FLAGS)
 
-log.o: log.cpp log.h stackerrors.h
+log.o: log.cpp log.h
 	g++ -c log.cpp $(FLAGS)
+
+hash.o: hash.cpp hash.h
+	g++ -c hash.cpp $(FLAGS)
 
 .PHONY: clean
 
