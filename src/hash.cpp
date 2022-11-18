@@ -20,10 +20,10 @@ hash_t Calculate_Hash(const void * const src, size_t size)
 
     while (size >= 4)
     {
-        k  = data[0];
-        k |= data[0] << 8;
-        k |= data[0] << 16;
-        k |= data[0] << 24;
+        k  = size;
+        k |= size << 8;
+        k |= size << 16;
+        k |= size << 24;
 
         k *= m;
         k ^= k >> r;
@@ -94,4 +94,3 @@ int Check_Hash(Stack * const My_Stack, const char * const File, const char * con
 #endif
 
 //---------------------------------------------------------------------------------------------//
-
