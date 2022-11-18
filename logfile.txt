@@ -298,3 +298,1229 @@ The value of data_hash is 3568260582. It's adress is 0x16f257278. It's adress in
 ERROR IN FUNCION int Stack_Pop(Stack *const), IN FILE stack.cpp, IN LINE 166.
 THE VALUE OF DATA_HASH WAS CHANGED FROM 4215152252 TO 3568260582
 
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Ctor(Stack *const)
+In line 95
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 3
+The size of stack is 0
+
+The value of canary_left_data is 3735928559. It's adress is 0x102700c10. It's adrees in decimal system is 40897552
+
+The [0] elem of data is -1162158419. It's adress is 0x102700c18. It's adrees in decimal system is 40897560
+The [1] elem of data is -1162158419. It's adress is 0x102700c1c. It's adrees in decimal system is 40897564
+The [2] elem of data is -1162158419. It's adress is 0x102700c20. It's adrees in decimal system is 40897568
+
+The value of canary_right_data is 3735928559. It's adress is 0x102700c38. It's adrees in decimal system is 40897592
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 3568260582. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 3
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x102700c10. It's adrees in decimal system is 40897552
+
+The [0] elem of data is 1. It's adress is 0x102700c18. It's adrees in decimal system is 40897560
+The [1] elem of data is -1162158419. It's adress is 0x102700c1c. It's adrees in decimal system is 40897564
+The [2] elem of data is -1162158419. It's adress is 0x102700c20. It's adrees in decimal system is 40897568
+
+The value of canary_right_data is 3735928559. It's adress is 0x102700c38. It's adrees in decimal system is 40897592
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 3568260582. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 3
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x102700c10. It's adrees in decimal system is 40897552
+
+The [0] elem of data is 1. It's adress is 0x102700c18. It's adrees in decimal system is 40897560
+The [1] elem of data is 2. It's adress is 0x102700c1c. It's adrees in decimal system is 40897564
+The [2] elem of data is -1162158419. It's adress is 0x102700c20. It's adrees in decimal system is 40897568
+
+The value of canary_right_data is 3735928559. It's adress is 0x102700c38. It's adrees in decimal system is 40897592
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 3587726389. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 3
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x102700c10. It's adrees in decimal system is 40897552
+
+The [0] elem of data is 1. It's adress is 0x102700c18. It's adrees in decimal system is 40897560
+The [1] elem of data is 2. It's adress is 0x102700c1c. It's adrees in decimal system is 40897564
+The [2] elem of data is 3. It's adress is 0x102700c20. It's adrees in decimal system is 40897568
+
+The value of canary_right_data is 3735928559. It's adress is 0x102700c38. It's adrees in decimal system is 40897592
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 68711350. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Resize(Stack *, int)
+In line 215
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x102c03d80. It's adrees in decimal system is 46153088
+
+The [0] elem of data is 1. It's adress is 0x102c03d88. It's adrees in decimal system is 46153096
+The [1] elem of data is 2. It's adress is 0x102c03d8c. It's adrees in decimal system is 46153100
+The [2] elem of data is 3. It's adress is 0x102c03d90. It's adrees in decimal system is 46153104
+The [3] elem of data is -1162158419. It's adress is 0x102c03d94. It's adrees in decimal system is 46153108
+The [4] elem of data is -1162158419. It's adress is 0x102c03d98. It's adrees in decimal system is 46153112
+The [5] elem of data is -1162158419. It's adress is 0x102c03d9c. It's adrees in decimal system is 46153116
+
+The value of canary_right_data is 3735928559. It's adress is 0x102c03da8. It's adrees in decimal system is 46153128
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 1748821198. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 6
+The size of stack is 4
+
+The value of canary_left_data is 3735928559. It's adress is 0x102c03d80. It's adrees in decimal system is 46153088
+
+The [0] elem of data is 1. It's adress is 0x102c03d88. It's adrees in decimal system is 46153096
+The [1] elem of data is 2. It's adress is 0x102c03d8c. It's adrees in decimal system is 46153100
+The [2] elem of data is 3. It's adress is 0x102c03d90. It's adrees in decimal system is 46153104
+The [3] elem of data is 2. It's adress is 0x102c03d94. It's adrees in decimal system is 46153108
+The [4] elem of data is -1162158419. It's adress is 0x102c03d98. It's adrees in decimal system is 46153112
+The [5] elem of data is -1162158419. It's adress is 0x102c03d9c. It's adrees in decimal system is 46153116
+
+The value of canary_right_data is 3735928559. It's adress is 0x102c03da8. It's adrees in decimal system is 46153128
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 4244355887. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x102c03d80. It's adrees in decimal system is 46153088
+
+The [0] elem of data is 1. It's adress is 0x102c03d88. It's adrees in decimal system is 46153096
+The [1] elem of data is 2. It's adress is 0x102c03d8c. It's adrees in decimal system is 46153100
+The [2] elem of data is 3. It's adress is 0x102c03d90. It's adrees in decimal system is 46153104
+The [3] elem of data is -1162158419. It's adress is 0x102c03d94. It's adrees in decimal system is 46153108
+The [4] elem of data is -1162158419. It's adress is 0x102c03d98. It's adrees in decimal system is 46153112
+The [5] elem of data is -1162158419. It's adress is 0x102c03d9c. It's adrees in decimal system is 46153116
+
+The value of canary_right_data is 3735928559. It's adress is 0x102c03da8. It's adrees in decimal system is 46153128
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 1038931395. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 6
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x102c03d80. It's adrees in decimal system is 46153088
+
+The [0] elem of data is 1. It's adress is 0x102c03d88. It's adrees in decimal system is 46153096
+The [1] elem of data is 2. It's adress is 0x102c03d8c. It's adrees in decimal system is 46153100
+The [2] elem of data is -1162158419. It's adress is 0x102c03d90. It's adrees in decimal system is 46153104
+The [3] elem of data is -1162158419. It's adress is 0x102c03d94. It's adrees in decimal system is 46153108
+The [4] elem of data is -1162158419. It's adress is 0x102c03d98. It's adrees in decimal system is 46153112
+The [5] elem of data is -1162158419. It's adress is 0x102c03d9c. It's adrees in decimal system is 46153116
+
+The value of canary_right_data is 3735928559. It's adress is 0x102c03da8. It's adrees in decimal system is 46153128
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 4244355887. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The value of left Canary is 3735928559. It's adress is 0x16fbcf240. It's adrees in decimal system is 1874653760
+
+The capacity of stack is 6
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x102c03d80. It's adrees in decimal system is 46153088
+
+The [0] elem of data is 1. It's adress is 0x102c03d88. It's adrees in decimal system is 46153096
+The [1] elem of data is -1162158419. It's adress is 0x102c03d8c. It's adrees in decimal system is 46153100
+The [2] elem of data is -1162158419. It's adress is 0x102c03d90. It's adrees in decimal system is 46153104
+The [3] elem of data is -1162158419. It's adress is 0x102c03d94. It's adrees in decimal system is 46153108
+The [4] elem of data is -1162158419. It's adress is 0x102c03d98. It's adrees in decimal system is 46153112
+The [5] elem of data is -1162158419. It's adress is 0x102c03d9c. It's adrees in decimal system is 46153116
+
+The value of canary_right_data is 3735928559. It's adress is 0x102c03da8. It's adrees in decimal system is 46153128
+
+The value of right Canary is 3735928559. It's adress is 0x16fbcf268. It's adrees in decimal system is 1874653800
+
+The value of stack_hash is 4141882794. It's adress is 0x16fbcf270. It's adress in decimal system is 1874653808
+
+The value of data_hash is 1301218317. It's adress is 0x16fbcf278. It's adress in decimal system is 1874653816
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Ctor(Stack *const)
+In line 95
+
+Stack has an adress 0x16b567240. It's adrees in decimal system is 1800827456
+
+The value of left Canary is 3735928559. It's adress is 0x16b567240. It's adrees in decimal system is 1800827456
+
+The capacity of stack is 3
+The size of stack is 0
+
+The value of canary_left_data is 3735928559. It's adress is 0x106e00c10. It's adrees in decimal system is 115346448
+
+The [0] elem of data is -1162158419. It's adress is 0x106e00c18. It's adrees in decimal system is 115346456
+The [1] elem of data is -1162158419. It's adress is 0x106e00c1c. It's adrees in decimal system is 115346460
+The [2] elem of data is -1162158419. It's adress is 0x106e00c20. It's adrees in decimal system is 115346464
+
+The value of canary_right_data is 3735928559. It's adress is 0x106e00c38. It's adrees in decimal system is 115346488
+
+The value of right Canary is 3735928559. It's adress is 0x16b567268. It's adrees in decimal system is 1800827496
+
+The value of stack_hash is 4141882794. It's adress is 0x16b567270. It's adress in decimal system is 1800827504
+
+The value of data_hash is 3568260582. It's adress is 0x16b567278. It's adress in decimal system is 1800827512
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16b567240. It's adrees in decimal system is 1800827456
+
+The value of left Canary is 3735928559. It's adress is 0x16b567240. It's adrees in decimal system is 1800827456
+
+The capacity of stack is 3
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x106e00c10. It's adrees in decimal system is 115346448
+
+The [0] elem of data is 1. It's adress is 0x106e00c18. It's adrees in decimal system is 115346456
+The [1] elem of data is -1162158419. It's adress is 0x106e00c1c. It's adrees in decimal system is 115346460
+The [2] elem of data is -1162158419. It's adress is 0x106e00c20. It's adrees in decimal system is 115346464
+
+The value of canary_right_data is 3735928559. It's adress is 0x106e00c38. It's adrees in decimal system is 115346488
+
+The value of right Canary is 3735928559. It's adress is 0x16b567268. It's adrees in decimal system is 1800827496
+
+The value of stack_hash is 4141882794. It's adress is 0x16b567270. It's adress in decimal system is 1800827504
+
+The value of data_hash is 3568260582. It's adress is 0x16b567278. It's adress in decimal system is 1800827512
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16b567240. It's adrees in decimal system is 1800827456
+
+The value of left Canary is 3735928559. It's adress is 0x16b567240. It's adrees in decimal system is 1800827456
+
+The capacity of stack is 3
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x106e00c10. It's adrees in decimal system is 115346448
+
+The [0] elem of data is 1. It's adress is 0x106e00c18. It's adrees in decimal system is 115346456
+The [1] elem of data is 2. It's adress is 0x106e00c1c. It's adrees in decimal system is 115346460
+The [2] elem of data is -1162158419. It's adress is 0x106e00c20. It's adrees in decimal system is 115346464
+
+The value of canary_right_data is 3735928559. It's adress is 0x106e00c38. It's adrees in decimal system is 115346488
+
+The value of right Canary is 3735928559. It's adress is 0x16b567268. It's adrees in decimal system is 1800827496
+
+The value of stack_hash is 4141882794. It's adress is 0x16b567270. It's adress in decimal system is 1800827504
+
+The value of data_hash is 3587726389. It's adress is 0x16b567278. It's adress in decimal system is 1800827512
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16b567240. It's adrees in decimal system is 1800827456
+
+The value of left Canary is 3735928559. It's adress is 0x16b567240. It's adrees in decimal system is 1800827456
+
+The capacity of stack is 3
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x106e00c10. It's adrees in decimal system is 115346448
+
+The [0] elem of data is 1. It's adress is 0x106e00c18. It's adrees in decimal system is 115346456
+The [1] elem of data is 2. It's adress is 0x106e00c1c. It's adrees in decimal system is 115346460
+The [2] elem of data is 3. It's adress is 0x106e00c20. It's adrees in decimal system is 115346464
+
+The value of canary_right_data is 3735928559. It's adress is 0x106e00c38. It's adrees in decimal system is 115346488
+
+The value of right Canary is 3735928559. It's adress is 0x16b567268. It's adrees in decimal system is 1800827496
+
+The value of stack_hash is 4141882794. It's adress is 0x16b567270. It's adress in decimal system is 1800827504
+
+The value of data_hash is 68711350. It's adress is 0x16b567278. It's adress in decimal system is 1800827512
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Ctor(Stack *const)
+In line 95
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 3
+The size of stack is 0
+
+The value of canary_left_data is 3735928559. It's adress is 0x104b00c10. It's adrees in decimal system is 78646288
+
+The [0] elem of data is -1162158419. It's adress is 0x104b00c18. It's adrees in decimal system is 78646296
+The [1] elem of data is -1162158419. It's adress is 0x104b00c1c. It's adrees in decimal system is 78646300
+The [2] elem of data is -1162158419. It's adress is 0x104b00c20. It's adrees in decimal system is 78646304
+
+The value of canary_right_data is 3735928559. It's adress is 0x104b00c38. It's adrees in decimal system is 78646328
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 1731712953. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 3
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x104b00c10. It's adrees in decimal system is 78646288
+
+The [0] elem of data is 1. It's adress is 0x104b00c18. It's adrees in decimal system is 78646296
+The [1] elem of data is -1162158419. It's adress is 0x104b00c1c. It's adrees in decimal system is 78646300
+The [2] elem of data is -1162158419. It's adress is 0x104b00c20. It's adrees in decimal system is 78646304
+
+The value of canary_right_data is 3735928559. It's adress is 0x104b00c38. It's adrees in decimal system is 78646328
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 1731712953. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 3
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x104b00c10. It's adrees in decimal system is 78646288
+
+The [0] elem of data is 1. It's adress is 0x104b00c18. It's adrees in decimal system is 78646296
+The [1] elem of data is 2. It's adress is 0x104b00c1c. It's adrees in decimal system is 78646300
+The [2] elem of data is -1162158419. It's adress is 0x104b00c20. It's adrees in decimal system is 78646304
+
+The value of canary_right_data is 3735928559. It's adress is 0x104b00c38. It's adrees in decimal system is 78646328
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 1731712953. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 3
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x104b00c10. It's adrees in decimal system is 78646288
+
+The [0] elem of data is 1. It's adress is 0x104b00c18. It's adrees in decimal system is 78646296
+The [1] elem of data is 2. It's adress is 0x104b00c1c. It's adrees in decimal system is 78646300
+The [2] elem of data is 3. It's adress is 0x104b00c20. It's adrees in decimal system is 78646304
+
+The value of canary_right_data is 3735928559. It's adress is 0x104b00c38. It's adrees in decimal system is 78646328
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 1731712953. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+ERROR IN FUNCION char *Stack_Recalloc(Stack *const), IN FILE stack.cpp, IN LINE 258.
+THE VALUE OF DATA_HASH WAS CHANGED FROM 2111856161 TO 1731712953
+
+ERROR IN FUNCION void Canary_Recalloc(Stack *const, const char *const), IN FILE stack.cpp, IN LINE 284.
+THE VALUE OF DATA_HASH WAS CHANGED FROM 2111856161 TO 1731712953
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Resize(Stack *, int)
+In line 215
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x105003d80. It's adrees in decimal system is 83901824
+
+The [0] elem of data is 1. It's adress is 0x105003d88. It's adrees in decimal system is 83901832
+The [1] elem of data is 2. It's adress is 0x105003d8c. It's adrees in decimal system is 83901836
+The [2] elem of data is 3. It's adress is 0x105003d90. It's adrees in decimal system is 83901840
+The [3] elem of data is -1162158419. It's adress is 0x105003d94. It's adrees in decimal system is 83901844
+The [4] elem of data is -1162158419. It's adress is 0x105003d98. It's adrees in decimal system is 83901848
+The [5] elem of data is -1162158419. It's adress is 0x105003d9c. It's adrees in decimal system is 83901852
+
+The value of canary_right_data is 3735928559. It's adress is 0x105003da8. It's adrees in decimal system is 83901864
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 1731712953. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 6
+The size of stack is 4
+
+The value of canary_left_data is 3735928559. It's adress is 0x105003d80. It's adrees in decimal system is 83901824
+
+The [0] elem of data is 1. It's adress is 0x105003d88. It's adrees in decimal system is 83901832
+The [1] elem of data is 2. It's adress is 0x105003d8c. It's adrees in decimal system is 83901836
+The [2] elem of data is 3. It's adress is 0x105003d90. It's adrees in decimal system is 83901840
+The [3] elem of data is 2. It's adress is 0x105003d94. It's adrees in decimal system is 83901844
+The [4] elem of data is -1162158419. It's adress is 0x105003d98. It's adrees in decimal system is 83901848
+The [5] elem of data is -1162158419. It's adress is 0x105003d9c. It's adrees in decimal system is 83901852
+
+The value of canary_right_data is 3735928559. It's adress is 0x105003da8. It's adrees in decimal system is 83901864
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 2111856161. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x105003d80. It's adrees in decimal system is 83901824
+
+The [0] elem of data is 1. It's adress is 0x105003d88. It's adrees in decimal system is 83901832
+The [1] elem of data is 2. It's adress is 0x105003d8c. It's adrees in decimal system is 83901836
+The [2] elem of data is 3. It's adress is 0x105003d90. It's adrees in decimal system is 83901840
+The [3] elem of data is -1162158419. It's adress is 0x105003d94. It's adrees in decimal system is 83901844
+The [4] elem of data is -1162158419. It's adress is 0x105003d98. It's adrees in decimal system is 83901848
+The [5] elem of data is -1162158419. It's adress is 0x105003d9c. It's adrees in decimal system is 83901852
+
+The value of canary_right_data is 3735928559. It's adress is 0x105003da8. It's adrees in decimal system is 83901864
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 2111856161. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 6
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x105003d80. It's adrees in decimal system is 83901824
+
+The [0] elem of data is 1. It's adress is 0x105003d88. It's adrees in decimal system is 83901832
+The [1] elem of data is 2. It's adress is 0x105003d8c. It's adrees in decimal system is 83901836
+The [2] elem of data is -1162158419. It's adress is 0x105003d90. It's adrees in decimal system is 83901840
+The [3] elem of data is -1162158419. It's adress is 0x105003d94. It's adrees in decimal system is 83901844
+The [4] elem of data is -1162158419. It's adress is 0x105003d98. It's adrees in decimal system is 83901848
+The [5] elem of data is -1162158419. It's adress is 0x105003d9c. It's adrees in decimal system is 83901852
+
+The value of canary_right_data is 3735928559. It's adress is 0x105003da8. It's adrees in decimal system is 83901864
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 2111856161. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The value of left Canary is 3735928559. It's adress is 0x16d82b260. It's adrees in decimal system is 1837281888
+
+The capacity of stack is 6
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x105003d80. It's adrees in decimal system is 83901824
+
+The [0] elem of data is 1. It's adress is 0x105003d88. It's adrees in decimal system is 83901832
+The [1] elem of data is -1162158419. It's adress is 0x105003d8c. It's adrees in decimal system is 83901836
+The [2] elem of data is -1162158419. It's adress is 0x105003d90. It's adrees in decimal system is 83901840
+The [3] elem of data is -1162158419. It's adress is 0x105003d94. It's adrees in decimal system is 83901844
+The [4] elem of data is -1162158419. It's adress is 0x105003d98. It's adrees in decimal system is 83901848
+The [5] elem of data is -1162158419. It's adress is 0x105003d9c. It's adrees in decimal system is 83901852
+
+The value of canary_right_data is 3735928559. It's adress is 0x105003da8. It's adrees in decimal system is 83901864
+
+The value of right Canary is 3735928559. It's adress is 0x16d82b288. It's adrees in decimal system is 1837281928
+
+The value of stack_hash is 4133632500. It's adress is 0x16d82b290. It's adress in decimal system is 1837281936
+
+The value of data_hash is 2111856161. It's adress is 0x16d82b298. It's adress in decimal system is 1837281944
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Ctor(Stack *const)
+In line 95
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 3
+The size of stack is 0
+
+The value of canary_left_data is 3735928559. It's adress is 0x106b00c10. It's adrees in decimal system is 112200720
+
+The [0] elem of data is -1162158419. It's adress is 0x106b00c18. It's adrees in decimal system is 112200728
+The [1] elem of data is -1162158419. It's adress is 0x106b00c1c. It's adrees in decimal system is 112200732
+The [2] elem of data is -1162158419. It's adress is 0x106b00c20. It's adrees in decimal system is 112200736
+
+The value of canary_right_data is 3735928559. It's adress is 0x106b00c38. It's adrees in decimal system is 112200760
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 1731712953. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 3
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x106b00c10. It's adrees in decimal system is 112200720
+
+The [0] elem of data is 1. It's adress is 0x106b00c18. It's adrees in decimal system is 112200728
+The [1] elem of data is -1162158419. It's adress is 0x106b00c1c. It's adrees in decimal system is 112200732
+The [2] elem of data is -1162158419. It's adress is 0x106b00c20. It's adrees in decimal system is 112200736
+
+The value of canary_right_data is 3735928559. It's adress is 0x106b00c38. It's adrees in decimal system is 112200760
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 1731712953. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 3
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x106b00c10. It's adrees in decimal system is 112200720
+
+The [0] elem of data is 1. It's adress is 0x106b00c18. It's adrees in decimal system is 112200728
+The [1] elem of data is 2. It's adress is 0x106b00c1c. It's adrees in decimal system is 112200732
+The [2] elem of data is -1162158419. It's adress is 0x106b00c20. It's adrees in decimal system is 112200736
+
+The value of canary_right_data is 3735928559. It's adress is 0x106b00c38. It's adrees in decimal system is 112200760
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 1731712953. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 3
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x106b00c10. It's adrees in decimal system is 112200720
+
+The [0] elem of data is 1. It's adress is 0x106b00c18. It's adrees in decimal system is 112200728
+The [1] elem of data is 2. It's adress is 0x106b00c1c. It's adrees in decimal system is 112200732
+The [2] elem of data is 3. It's adress is 0x106b00c20. It's adrees in decimal system is 112200736
+
+The value of canary_right_data is 3735928559. It's adress is 0x106b00c38. It's adrees in decimal system is 112200760
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 1731712953. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Resize(Stack *, int)
+In line 215
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x107003d80. It's adrees in decimal system is 117456256
+
+The [0] elem of data is 1. It's adress is 0x107003d88. It's adrees in decimal system is 117456264
+The [1] elem of data is 2. It's adress is 0x107003d8c. It's adrees in decimal system is 117456268
+The [2] elem of data is 3. It's adress is 0x107003d90. It's adrees in decimal system is 117456272
+The [3] elem of data is -1162158419. It's adress is 0x107003d94. It's adrees in decimal system is 117456276
+The [4] elem of data is -1162158419. It's adress is 0x107003d98. It's adrees in decimal system is 117456280
+The [5] elem of data is -1162158419. It's adress is 0x107003d9c. It's adrees in decimal system is 117456284
+
+The value of canary_right_data is 3735928559. It's adress is 0x107003da8. It's adrees in decimal system is 117456296
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 2111856161. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 6
+The size of stack is 4
+
+The value of canary_left_data is 3735928559. It's adress is 0x107003d80. It's adrees in decimal system is 117456256
+
+The [0] elem of data is 1. It's adress is 0x107003d88. It's adrees in decimal system is 117456264
+The [1] elem of data is 2. It's adress is 0x107003d8c. It's adrees in decimal system is 117456268
+The [2] elem of data is 3. It's adress is 0x107003d90. It's adrees in decimal system is 117456272
+The [3] elem of data is 2. It's adress is 0x107003d94. It's adrees in decimal system is 117456276
+The [4] elem of data is -1162158419. It's adress is 0x107003d98. It's adrees in decimal system is 117456280
+The [5] elem of data is -1162158419. It's adress is 0x107003d9c. It's adrees in decimal system is 117456284
+
+The value of canary_right_data is 3735928559. It's adress is 0x107003da8. It's adrees in decimal system is 117456296
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 2111856161. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x107003d80. It's adrees in decimal system is 117456256
+
+The [0] elem of data is 1. It's adress is 0x107003d88. It's adrees in decimal system is 117456264
+The [1] elem of data is 2. It's adress is 0x107003d8c. It's adrees in decimal system is 117456268
+The [2] elem of data is 3. It's adress is 0x107003d90. It's adrees in decimal system is 117456272
+The [3] elem of data is -1162158419. It's adress is 0x107003d94. It's adrees in decimal system is 117456276
+The [4] elem of data is -1162158419. It's adress is 0x107003d98. It's adrees in decimal system is 117456280
+The [5] elem of data is -1162158419. It's adress is 0x107003d9c. It's adrees in decimal system is 117456284
+
+The value of canary_right_data is 3735928559. It's adress is 0x107003da8. It's adrees in decimal system is 117456296
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 2111856161. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 6
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x107003d80. It's adrees in decimal system is 117456256
+
+The [0] elem of data is 1. It's adress is 0x107003d88. It's adrees in decimal system is 117456264
+The [1] elem of data is 2. It's adress is 0x107003d8c. It's adrees in decimal system is 117456268
+The [2] elem of data is -1162158419. It's adress is 0x107003d90. It's adrees in decimal system is 117456272
+The [3] elem of data is -1162158419. It's adress is 0x107003d94. It's adrees in decimal system is 117456276
+The [4] elem of data is -1162158419. It's adress is 0x107003d98. It's adrees in decimal system is 117456280
+The [5] elem of data is -1162158419. It's adress is 0x107003d9c. It's adrees in decimal system is 117456284
+
+The value of canary_right_data is 3735928559. It's adress is 0x107003da8. It's adrees in decimal system is 117456296
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 2111856161. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 11:55:24
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The value of left Canary is 3735928559. It's adress is 0x16b6e7240. It's adrees in decimal system is 1802400320
+
+The capacity of stack is 6
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x107003d80. It's adrees in decimal system is 117456256
+
+The [0] elem of data is 1. It's adress is 0x107003d88. It's adrees in decimal system is 117456264
+The [1] elem of data is -1162158419. It's adress is 0x107003d8c. It's adrees in decimal system is 117456268
+The [2] elem of data is -1162158419. It's adress is 0x107003d90. It's adrees in decimal system is 117456272
+The [3] elem of data is -1162158419. It's adress is 0x107003d94. It's adrees in decimal system is 117456276
+The [4] elem of data is -1162158419. It's adress is 0x107003d98. It's adrees in decimal system is 117456280
+The [5] elem of data is -1162158419. It's adress is 0x107003d9c. It's adrees in decimal system is 117456284
+
+The value of canary_right_data is 3735928559. It's adress is 0x107003da8. It's adrees in decimal system is 117456296
+
+The value of right Canary is 3735928559. It's adress is 0x16b6e7268. It's adrees in decimal system is 1802400360
+
+The value of stack_hash is 4133632500. It's adress is 0x16b6e7270. It's adress in decimal system is 1802400368
+
+The value of data_hash is 2111856161. It's adress is 0x16b6e7278. It's adress in decimal system is 1802400376
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Ctor(Stack *const)
+In line 95
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 3
+The size of stack is 0
+
+The value of canary_left_data is 3735928559. It's adress is 0x104700c10. It's adrees in decimal system is 74451984
+
+The [0] elem of data is -1162158419. It's adress is 0x104700c18. It's adrees in decimal system is 74451992
+The [1] elem of data is -1162158419. It's adress is 0x104700c1c. It's adrees in decimal system is 74451996
+The [2] elem of data is -1162158419. It's adress is 0x104700c20. It's adrees in decimal system is 74452000
+
+The value of canary_right_data is 3735928559. It's adress is 0x104700c38. It's adrees in decimal system is 74452024
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 1731712953. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 3
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x104700c10. It's adrees in decimal system is 74451984
+
+The [0] elem of data is 1. It's adress is 0x104700c18. It's adrees in decimal system is 74451992
+The [1] elem of data is -1162158419. It's adress is 0x104700c1c. It's adrees in decimal system is 74451996
+The [2] elem of data is -1162158419. It's adress is 0x104700c20. It's adrees in decimal system is 74452000
+
+The value of canary_right_data is 3735928559. It's adress is 0x104700c38. It's adrees in decimal system is 74452024
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 1731712953. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 3
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x104700c10. It's adrees in decimal system is 74451984
+
+The [0] elem of data is 1. It's adress is 0x104700c18. It's adrees in decimal system is 74451992
+The [1] elem of data is 2. It's adress is 0x104700c1c. It's adrees in decimal system is 74451996
+The [2] elem of data is -1162158419. It's adress is 0x104700c20. It's adrees in decimal system is 74452000
+
+The value of canary_right_data is 3735928559. It's adress is 0x104700c38. It's adrees in decimal system is 74452024
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 1731712953. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 3
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x104700c10. It's adrees in decimal system is 74451984
+
+The [0] elem of data is 1. It's adress is 0x104700c18. It's adrees in decimal system is 74451992
+The [1] elem of data is 2. It's adress is 0x104700c1c. It's adrees in decimal system is 74451996
+The [2] elem of data is 3. It's adress is 0x104700c20. It's adrees in decimal system is 74452000
+
+The value of canary_right_data is 3735928559. It's adress is 0x104700c38. It's adrees in decimal system is 74452024
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 1731712953. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Resize(Stack *, int)
+In line 215
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x104c03d80. It's adrees in decimal system is 79707520
+
+The [0] elem of data is 1. It's adress is 0x104c03d88. It's adrees in decimal system is 79707528
+The [1] elem of data is 2. It's adress is 0x104c03d8c. It's adrees in decimal system is 79707532
+The [2] elem of data is 3. It's adress is 0x104c03d90. It's adrees in decimal system is 79707536
+The [3] elem of data is -1162158419. It's adress is 0x104c03d94. It's adrees in decimal system is 79707540
+The [4] elem of data is -1162158419. It's adress is 0x104c03d98. It's adrees in decimal system is 79707544
+The [5] elem of data is -1162158419. It's adress is 0x104c03d9c. It's adrees in decimal system is 79707548
+
+The value of canary_right_data is 3735928559. It's adress is 0x104c03da8. It's adrees in decimal system is 79707560
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 2111856161. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Push(Stack *const, const int)
+In line 123
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 6
+The size of stack is 4
+
+The value of canary_left_data is 3735928559. It's adress is 0x104c03d80. It's adrees in decimal system is 79707520
+
+The [0] elem of data is 1. It's adress is 0x104c03d88. It's adrees in decimal system is 79707528
+The [1] elem of data is 2. It's adress is 0x104c03d8c. It's adrees in decimal system is 79707532
+The [2] elem of data is 3. It's adress is 0x104c03d90. It's adrees in decimal system is 79707536
+The [3] elem of data is 2. It's adress is 0x104c03d94. It's adrees in decimal system is 79707540
+The [4] elem of data is -1162158419. It's adress is 0x104c03d98. It's adrees in decimal system is 79707544
+The [5] elem of data is -1162158419. It's adress is 0x104c03d9c. It's adrees in decimal system is 79707548
+
+The value of canary_right_data is 3735928559. It's adress is 0x104c03da8. It's adrees in decimal system is 79707560
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 2111856161. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 6
+The size of stack is 3
+
+The value of canary_left_data is 3735928559. It's adress is 0x104c03d80. It's adrees in decimal system is 79707520
+
+The [0] elem of data is 1. It's adress is 0x104c03d88. It's adrees in decimal system is 79707528
+The [1] elem of data is 2. It's adress is 0x104c03d8c. It's adrees in decimal system is 79707532
+The [2] elem of data is 3. It's adress is 0x104c03d90. It's adrees in decimal system is 79707536
+The [3] elem of data is -1162158419. It's adress is 0x104c03d94. It's adrees in decimal system is 79707540
+The [4] elem of data is -1162158419. It's adress is 0x104c03d98. It's adrees in decimal system is 79707544
+The [5] elem of data is -1162158419. It's adress is 0x104c03d9c. It's adrees in decimal system is 79707548
+
+The value of canary_right_data is 3735928559. It's adress is 0x104c03da8. It's adrees in decimal system is 79707560
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 2111856161. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 6
+The size of stack is 2
+
+The value of canary_left_data is 3735928559. It's adress is 0x104c03d80. It's adrees in decimal system is 79707520
+
+The [0] elem of data is 1. It's adress is 0x104c03d88. It's adrees in decimal system is 79707528
+The [1] elem of data is 2. It's adress is 0x104c03d8c. It's adrees in decimal system is 79707532
+The [2] elem of data is -1162158419. It's adress is 0x104c03d90. It's adrees in decimal system is 79707536
+The [3] elem of data is -1162158419. It's adress is 0x104c03d94. It's adrees in decimal system is 79707540
+The [4] elem of data is -1162158419. It's adress is 0x104c03d98. It's adrees in decimal system is 79707544
+The [5] elem of data is -1162158419. It's adress is 0x104c03d9c. It's adrees in decimal system is 79707548
+
+The value of canary_right_data is 3735928559. It's adress is 0x104c03da8. It's adrees in decimal system is 79707560
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 2111856161. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
+//---------------------------------------------------------------------------------------------//
+
+Stack_Dump was called at 12:29:05
+At Nov 18 2022
+In file stack.cpp
+In function int Stack_Pop(Stack *const)
+In line 168
+
+Stack has an adress 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The value of left Canary is 3735928559. It's adress is 0x16dc57240. It's adrees in decimal system is 1841656384
+
+The capacity of stack is 6
+The size of stack is 1
+
+The value of canary_left_data is 3735928559. It's adress is 0x104c03d80. It's adrees in decimal system is 79707520
+
+The [0] elem of data is 1. It's adress is 0x104c03d88. It's adrees in decimal system is 79707528
+The [1] elem of data is -1162158419. It's adress is 0x104c03d8c. It's adrees in decimal system is 79707532
+The [2] elem of data is -1162158419. It's adress is 0x104c03d90. It's adrees in decimal system is 79707536
+The [3] elem of data is -1162158419. It's adress is 0x104c03d94. It's adrees in decimal system is 79707540
+The [4] elem of data is -1162158419. It's adress is 0x104c03d98. It's adrees in decimal system is 79707544
+The [5] elem of data is -1162158419. It's adress is 0x104c03d9c. It's adrees in decimal system is 79707548
+
+The value of canary_right_data is 3735928559. It's adress is 0x104c03da8. It's adrees in decimal system is 79707560
+
+The value of right Canary is 3735928559. It's adress is 0x16dc57268. It's adrees in decimal system is 1841656424
+
+The value of stack_hash is 4133632500. It's adress is 0x16dc57270. It's adress in decimal system is 1841656432
+
+The value of data_hash is 2111856161. It's adress is 0x16dc57278. It's adress in decimal system is 1841656440
+
