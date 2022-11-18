@@ -123,7 +123,12 @@ int Stack_Push(Stack * const My_Stack, const int value)
     STACK_VERIFY(My_Stack);
 
 #ifdef HASH_PROTECT
-    CHECK_HASH(My_Stack);
+    My_Stack->stack_hash = Calculate_Hash(My_Stack, sizeof(My_Stack));
+#ifdef CANARY_PROTECT
+    My_Stack->data_hash = Calculate_Hash(My_Stack->canary_left_data, 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
+#else
+    My_Stack->data_hash = Calculate_Hash(My_Stack->data, sizeof(elem_t));
+#endif
 #endif
 
     return No_Err;
@@ -163,7 +168,12 @@ int Stack_Pop(Stack * const My_Stack)
     STACK_VERIFY(My_Stack);
 
 #ifdef HASH_PROTECT
-    CHECK_HASH(My_Stack);
+    My_Stack->stack_hash = Calculate_Hash(My_Stack, sizeof(My_Stack));
+#ifdef CANARY_PROTECT
+    My_Stack->data_hash = Calculate_Hash(My_Stack->canary_left_data, 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
+#else
+    My_Stack->data_hash = Calculate_Hash(My_Stack->data, sizeof(elem_t));
+#endif
 #endif
 
     return Popping_Elem;
@@ -239,6 +249,15 @@ static char * Stack_Recalloc(Stack * const My_Stack)
         return nullptr;
     }
 
+#ifdef HASH_PROTECT
+    My_Stack->stack_hash = Calculate_Hash(My_Stack, sizeof(My_Stack));
+#ifdef CANARY_PROTECT
+    My_Stack->data_hash = Calculate_Hash(My_Stack->canary_left_data, 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
+#else
+    My_Stack->data_hash = Calculate_Hash(My_Stack->data, sizeof(elem_t));
+#endif
+#endif
+
     return Add_Alloc_Mem;
 }
 
@@ -259,7 +278,12 @@ static void Canary_Recalloc(Stack * const My_Stack, const char * const Add_Alloc
         My_Stack->canary_right_data = (canary_t *) (Add_Alloc_Mem + My_Stack->capacity * sizeof(elem_t) + sizeof(canary_t) +
         (sizeof(canary_t) - (My_Stack->capacity % sizeof(canary_t))) * sizeof(elem_t));
 
-    *(My_Stack->canary_right_data) = Canary_Value;    
+    *(My_Stack->canary_right_data) = Canary_Value;  
+
+#ifdef HASH_PROTECT
+    CHECK_HASH(My_Stack);
+#endif  
+
 }
 #endif
 
@@ -267,6 +291,9 @@ static void Canary_Recalloc(Stack * const My_Stack, const char * const Add_Alloc
 
 static int Is_Empty(Stack * const My_Stack)
 {
+#ifdef HASH_PROTECT
+    CHECK_HASH(My_Stack);
+#endif
     return My_Stack->size == 0;
 }
 
