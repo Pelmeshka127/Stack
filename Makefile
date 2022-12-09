@@ -20,19 +20,19 @@ FLAGS = -D _DEBUG -ggdb3 -std=c++17 -O0 -Wall -Wextra -Weffc++\
 			   -fsanitize=address,signed-integer-overflow,undefined,unreachable,vla-bound,vptr,
 
 stacktask: main.o stack.o debug.o log.o
-	g++ main.o stack.o debug.o log.o $(FLAGS) -o stack
+	g++ ./obj/main.o ./obj/stack.o ./obj/debug.o ./obj/log.o $(FLAGS) -o stack
 
 main.o: ./src/main.cpp
-	g++ -c ./src/main.cpp $(FLAGS)
+	g++ -c ./src/main.cpp $(FLAGS) -o ./obj/main.o
 
 stack.o: ./src/stack.cpp
-	g++ -c ./src/stack.cpp $(FLAGS)
+	g++ -c ./src/stack.cpp $(FLAGS) -o ./obj/stack.o
 
 debug.o: ./src/debug.cpp
-	g++ -c ./src/debug.cpp $(FLAGS)
+	g++ -c ./src/debug.cpp $(FLAGS) -o ./obj/debug.o
 
 log.o: ./src/log.cpp
-	g++ -c ./src/log.cpp $(FLAGS)
+	g++ -c ./src/log.cpp $(FLAGS)	-o ./obj/log.o
 
 .PHONY: clean
 
