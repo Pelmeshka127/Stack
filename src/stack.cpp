@@ -4,98 +4,86 @@
 #include <errno.h>
 #include <assert.h>
 
-#include "stack.h"
-#include "hash.h"
-#include "debug.h"
-#include "log.h"
+#include "../includes/stack.h"
+#include "../includes/debug.h"
+#include "../includes/log.h"
+
+static const elem_t Poison = -1;
+
+//---------------------------------------------------------------------------------------------//
+
+/// @brief Function sets canary after the allocation of memory
+/// @param my_stack is ptr on struct stack
+/// @param alloc_mem is ptr on allocated memory for stack data 
+static void Make_Canary_Protect(Stack * const my_stack, char * alloc_mem);
 
 //---------------------------------------------------------------------------------------------//
 
 /// @brief Function resizes the data of Stack
-/// @param My_Stack is ptr on struct Stack
+/// @param my_stack is ptr on struct Stack
 /// @return Alloc_Err if resizing failed an No_Err if it's OK
-static int Stack_Resize(Stack * const My_Stack, const int mode);
+static int Stack_Resize(Stack * const my_stack, const int mode);
 
 //---------------------------------------------------------------------------------------------//
 
 /// @brief Function reallocates the memory for data
-/// @param My_Stack is ptr on struct Stack
+/// @param my_stack is ptr on struct Stack
 /// @return Alloc_errif reallocation failed an No_Err if it's OK
-static char * Stack_Recalloc(Stack * const My_Stack);
+static char * Stack_Recalloc(Stack * const my_stack);
 
 //---------------------------------------------------------------------------------------------//
 
-/// @brief Function sets canaries after the allocation of memeory
-/// @param My_Stack is ptr on struct Stack
-static void Canary_Recalloc(Stack * const My_Stack, const char * const Add_Alloc_Mem);
+/// @brief Function sets canaries after the reallocation of memeory
+/// @param my_stack is ptr on struct Stack
+static void Canary_Recalloc(Stack * const my_stack, const char * const add_alloc_mem);
 
 //---------------------------------------------------------------------------------------------//
 
 /// @brief Function checks is empty Stack
-/// @param My_Stack is ptr on struct Stack
+/// @param my_stack is ptr on struct Stack
 /// @return If Stack is overflow - 1, else - 0
-static int Is_Empty(Stack * const My_Stack);
+static int Is_Empty(Stack * const my_stack);
 
 //---------------------------------------------------------------------------------------------//
 
-
-int Stack_Ctor(Stack * const My_Stack)
+int Stack_Ctor(Stack * const my_stack)
 {
-    assert(My_Stack);
+    assert(my_stack);
 
-    My_Stack->capacity = DEF_CAPACITY;
-
-    My_Stack->size = 0;
+    my_stack->capacity = DEF_CAPACITY;
+    my_stack->size = 0;
+    my_stack->error = No_Err;
 
 #ifdef CANARY_PROTECT
-    size_t Mem_Value = 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t) + 
-    (sizeof(canary_t) - (My_Stack->capacity % sizeof(canary_t))) * sizeof(elem_t);
+    size_t Mem_Value = 2 * sizeof(canary_t) + my_stack->capacity * sizeof(elem_t) + 
+    (sizeof(canary_t) - (my_stack->capacity % sizeof(canary_t))) * sizeof(elem_t);
 #else
-    size_t Mem_Value = My_Stack->capacity * sizeof(elem_t);
+    size_t Mem_Value = my_stack->capacity * sizeof(elem_t);
 #endif
 
-    char * Alloc_Mem = (char *)calloc (Mem_Value, sizeof(char));
-
-    if (Alloc_Mem == nullptr)
+    char * alloc_mem = (char *)calloc (Mem_Value, sizeof(char));
+    if (alloc_mem == nullptr)
     {
         fprintf(stderr, "THE INITIALIZATION OF MEMORY FAILED\n");
+        my_stack->error = Alloc_Err;
         return Alloc_Err;
     }
 
 #ifdef CANARY_PROTECT
-    My_Stack->canary_left_data = (canary_t *) (Alloc_Mem);
-
-    My_Stack->data = (elem_t *) (Alloc_Mem + sizeof(canary_t));
-
-    if (My_Stack->capacity % sizeof(canary_t) == 0)
-        My_Stack->canary_right_data = (canary_t *) (Alloc_Mem + sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
-    else
-        My_Stack->canary_right_data = (canary_t *) (Alloc_Mem + sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t) + 
-        (sizeof(canary_t) - (My_Stack->capacity % sizeof(canary_t))) * sizeof(elem_t));
-
-    *(My_Stack->canary_left_data) = Canary_Value;
-
-    *(My_Stack->canary_right_data) = Canary_Value;
+    Make_Canary_Protect(my_stack, alloc_mem);
 #else
-    My_Stack->data = (elem_t *) (Alloc_Mem);
+    my_stack->data = (elem_t *) (alloc_mem);
 #endif
 
-    for (int i = 0; i < (elem_t) My_Stack->capacity; i++)
-        My_Stack->data[i] = POISON;
+    for (int i = 0; i < (elem_t) my_stack->capacity; i++)
+        my_stack->data[i] = Poison;
+
+    Re_Calc_Hash(my_stack);
+
+    STACK_VERIFY(my_stack);
 
 #ifdef HASH_PROTECT
-    My_Stack->stack_hash = Calculate_Hash(My_Stack, sizeof(My_Stack));
-#ifdef CANARY_PROTECT
-    My_Stack->data_hash = Calculate_Hash(My_Stack->canary_left_data, 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
-#else
-    My_Stack->data_hash = Calculate_Hash(My_Stack->data, sizeof(elem_t));
-#endif
-#endif
-
-    STACK_VERIFY(My_Stack);
-
-#ifdef HASH_PROTECT
-    CHECK_HASH(My_Stack);
+    CHECK_HASH(my_stack);
 #endif
 
     return No_Err;
@@ -103,119 +91,96 @@ int Stack_Ctor(Stack * const My_Stack)
 
 //---------------------------------------------------------------------------------------------//
 
-int Stack_Push(Stack * const My_Stack, const int value)
+int Stack_Push(Stack * const my_stack, const int value)
 {
-    assert(My_Stack);
+    assert(my_stack);
 
-    if (My_Stack->size == My_Stack->capacity)
-        if (Stack_Resize(My_Stack, UP_MODE) == Alloc_Err)
+    if (my_stack->size == my_stack->capacity)
+        if (Stack_Resize(my_stack, UP_MODE) == Alloc_Err)
         {
-#ifdef CANARY_PROTECT
-            free(My_Stack->canary_left_data);
-#else
-            free(My_Stack->data);
-#endif
+            my_stack->error = Alloc_Err;
+            STACK_STOP_PROGRAMM(my_stack, __FILE__, __PRETTY_FUNCTION__, __LINE__);
             return Alloc_Err;
         }
             
-    My_Stack->data[My_Stack->size++] = value; 
+    my_stack->data[my_stack->size++] = value; 
 
-    STACK_VERIFY(My_Stack);
+    STACK_VERIFY(my_stack);
 
-#ifdef HASH_PROTECT
-    My_Stack->stack_hash = Calculate_Hash(My_Stack, sizeof(My_Stack));
-#ifdef CANARY_PROTECT
-    My_Stack->data_hash = Calculate_Hash(My_Stack->canary_left_data, 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
-#else
-    My_Stack->data_hash = Calculate_Hash(My_Stack->data, sizeof(elem_t));
-#endif
-#endif
+    Re_Calc_Hash(my_stack);
 
     return No_Err;
 }
 
 //---------------------------------------------------------------------------------------------//
 
-int Stack_Pop(Stack * const My_Stack)
+elem_t Stack_Pop(Stack * const my_stack) 
 {
-    assert(My_Stack);
+    assert(my_stack);
 
-    if (Is_Empty(My_Stack))
+    if (Is_Empty(my_stack))
     {
-#ifdef CANARY_PROTECT
-        free(My_Stack->canary_left_data);
-#else
-        free(My_Stack->data);
-#endif
+        my_stack->error = Underflow;
+        STACK_STOP_PROGRAMM(my_stack, __FILE__, __PRETTY_FUNCTION__, __LINE__);
         return Underflow;
     }
 
-    if (MIN_SIZE * My_Stack->size <= My_Stack->capacity)
-        if (Stack_Resize(My_Stack, LOW_MODE) == Alloc_Err)
+    if (MIN_SIZE * my_stack->size <= my_stack->capacity)
+        if (Stack_Resize(my_stack, LOW_MODE) == Alloc_Err)
         {
-#ifdef CANARY_PROTECT
-            free(My_Stack->canary_left_data);
-#else 
-            free(My_Stack->data);
-#endif
+            my_stack->error = Alloc_Err;
+            STACK_STOP_PROGRAMM(my_stack, __FILE__, __PRETTY_FUNCTION__, __LINE__);
             return Alloc_Err;
         }
 
-    elem_t Popping_Elem = My_Stack->data[My_Stack->size - 1];
+    elem_t Popping_Elem = my_stack->data[my_stack->size - 1];
 
-    My_Stack->data[--My_Stack->size] = POISON;
+    my_stack->data[--my_stack->size] = Poison;
 
-    STACK_VERIFY(My_Stack);
+    STACK_VERIFY(my_stack);
 
-#ifdef HASH_PROTECT
-    My_Stack->stack_hash = Calculate_Hash(My_Stack, sizeof(My_Stack));
-#ifdef CANARY_PROTECT
-    My_Stack->data_hash = Calculate_Hash(My_Stack->canary_left_data, 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
-#else
-    My_Stack->data_hash = Calculate_Hash(My_Stack->data, sizeof(elem_t));
-#endif
-#endif
+    Re_Calc_Hash(my_stack);
 
     return Popping_Elem;
 }
 
 //---------------------------------------------------------------------------------------------//
 
-static int Stack_Resize(Stack * My_Stack, int mode)
+static int Stack_Resize(Stack * my_stack, int mode)
 {
-    assert(My_Stack);
+    assert(my_stack);
 
     if (mode == UP_MODE)
-        My_Stack->capacity *= MULTIPLIER;
-    
+        my_stack->capacity *= MULTIPLIER;
     else if (mode == LOW_MODE)
-        My_Stack->capacity /= MULTIPLIER;
-
+        my_stack->capacity /= MULTIPLIER;
     else
     {
         fprintf(stderr, "INCORRECT VALUE OF MODE %d. STACK CAN'T BE RESIZED\n", mode);
         return Alloc_Err;
     }
 
-    char * Add_Alloc_Mem = Stack_Recalloc(My_Stack);
-    
-    if (Add_Alloc_Mem == nullptr)
+    char * add_alloc_mem = Stack_Recalloc(my_stack);
+    if (add_alloc_mem == nullptr)
+    {
+        Stack_Print_Err(my_stack, my_stack->error = Alloc_Err, __FILE__, __PRETTY_FUNCTION__, __LINE__);
         return Alloc_Err;
+    }
 
 #ifdef CANARY_PROTECT
-    Canary_Recalloc(My_Stack, Add_Alloc_Mem);
+    Canary_Recalloc(my_stack, add_alloc_mem);
 #else
-    My_Stack->data = (elem_t *) (Add_Alloc_Mem);
+    my_stack->data = (elem_t *) (add_alloc_mem);
 #endif
 
     if (mode == UP_MODE)
-        for (int i = My_Stack->capacity / MULTIPLIER; i < My_Stack->capacity; i++)
-            My_Stack->data[i] = POISON;
+        for (size_t i = my_stack->capacity / MULTIPLIER; i < my_stack->capacity; i++)
+            my_stack->data[i] = Poison;
             
-    STACK_VERIFY(My_Stack);
+    STACK_VERIFY(my_stack);
 
 #ifdef HASH_PROTECT
-    CHECK_HASH(My_Stack);
+    CHECK_HASH(my_stack);
 #endif
 
     return No_Err;
@@ -223,98 +188,109 @@ static int Stack_Resize(Stack * My_Stack, int mode)
 
 //---------------------------------------------------------------------------------------------//
 
-static char * Stack_Recalloc(Stack * const My_Stack)
+static char * Stack_Recalloc(Stack * const my_stack)
 {
-    assert(My_Stack);
+    assert(my_stack);
 
 #ifdef CANARY_PROTECT
-    size_t Add_Mem_Value = 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t) +
-    (sizeof(canary_t) - (My_Stack->capacity % sizeof(canary_t))) * sizeof(elem_t);
+    size_t Add_Mem_Value = 2 * sizeof(canary_t) + my_stack->capacity * sizeof(elem_t) +
+    (sizeof(canary_t) - (my_stack->capacity % sizeof(canary_t))) * sizeof(elem_t);
 #else
-    size_t Add_Mem_Value = My_Stack->capacity * sizeof(elem_t);
+    size_t Add_Mem_Value = my_stack->capacity * sizeof(elem_t);
 #endif
 
 #ifdef CANARY_PROTECT
-    char * Add_Alloc_Mem = (char *)realloc (My_Stack->canary_left_data, Add_Mem_Value * sizeof(canary_t));
+    char * add_alloc_mem = (char *)realloc (my_stack->canary_left_data, Add_Mem_Value * sizeof(canary_t));
 #else
-    char * Add_Alloc_Mem = (char *)realloc (My_Stack->data, Add_Mem_Value * sizeof(elem_t));
+    char * add_alloc_mem = (char *)realloc (my_stack->data, Add_Mem_Value * sizeof(elem_t));
 #endif
 
-    if (Add_Alloc_Mem == nullptr)
+    if (add_alloc_mem == nullptr)
     {
-        Stack_Print_Err(My_Stack, Alloc_Err, __FILE__, __PRETTY_FUNCTION__, __LINE__);
+        Stack_Print_Err(my_stack, Alloc_Err, __FILE__, __PRETTY_FUNCTION__, __LINE__);
 #ifdef USE_LOGS
-        Logfile_Stack_Print_Err(My_Stack, Alloc_Err,  __FILE__, __PRETTY_FUNCTION__, __LINE__);
+        Logfile_Stack_Print_Err(my_stack, Alloc_Err,  __FILE__, __PRETTY_FUNCTION__, __LINE__);
 #endif
         return nullptr;
     }
 
-#ifdef HASH_PROTECT
-    My_Stack->stack_hash = Calculate_Hash(My_Stack, sizeof(My_Stack));
-#ifdef CANARY_PROTECT
-    My_Stack->data_hash = Calculate_Hash(My_Stack->canary_left_data, 2 * sizeof(canary_t) + My_Stack->capacity * sizeof(elem_t));
-#else
-    My_Stack->data_hash = Calculate_Hash(My_Stack->data, sizeof(elem_t));
-#endif
-#endif
+    Re_Calc_Hash(my_stack);
 
-    return Add_Alloc_Mem;
+    return add_alloc_mem;
 }
 
 //---------------------------------------------------------------------------------------------//
 
 #ifdef CANARY_PROTECT
-static void Canary_Recalloc(Stack * const My_Stack, const char * const Add_Alloc_Mem)
+static void Canary_Recalloc(Stack * const my_stack, const char * const add_alloc_mem)
 {
-    assert(Add_Alloc_Mem);
+    assert(add_alloc_mem);
 
-    My_Stack->canary_left_data = (canary_t *) (Add_Alloc_Mem);
+    my_stack->canary_left_data = (canary_t *) (add_alloc_mem);
 
-    My_Stack->data = (elem_t *) (Add_Alloc_Mem + sizeof(canary_t));
+    my_stack->data = (elem_t *) (add_alloc_mem + sizeof(canary_t));
 
-    if (My_Stack->capacity % sizeof(canary_t) == 0)
-        My_Stack->canary_right_data = (canary_t *) (Add_Alloc_Mem + My_Stack->capacity * sizeof(elem_t) + sizeof(canary_t));
+    if (my_stack->capacity % sizeof(canary_t) == 0)
+        my_stack->canary_right_data = (canary_t *) (add_alloc_mem + my_stack->capacity * sizeof(elem_t) + sizeof(canary_t));
     else
-        My_Stack->canary_right_data = (canary_t *) (Add_Alloc_Mem + My_Stack->capacity * sizeof(elem_t) + sizeof(canary_t) +
-        (sizeof(canary_t) - (My_Stack->capacity % sizeof(canary_t))) * sizeof(elem_t));
+        my_stack->canary_right_data = (canary_t *) (add_alloc_mem + my_stack->capacity * sizeof(elem_t) + sizeof(canary_t) +
+        (sizeof(canary_t) - (my_stack->capacity % sizeof(canary_t))) * sizeof(elem_t));
 
-    *(My_Stack->canary_right_data) = Canary_Value;  
+    *(my_stack->canary_left_data)  = Canary_Value;
 
-#ifdef HASH_PROTECT
-    CHECK_HASH(My_Stack);
-#endif  
-
+    *(my_stack->canary_right_data) = Canary_Value;  
 }
 #endif
 
 //---------------------------------------------------------------------------------------------//
 
-static int Is_Empty(Stack * const My_Stack)
+static int Is_Empty(Stack * const my_stack)
 {
 #ifdef HASH_PROTECT
-    CHECK_HASH(My_Stack);
+    CHECK_HASH(my_stack);
 #endif
-    return My_Stack->size == 0;
+    return my_stack->size == 0;
 }
 
 //---------------------------------------------------------------------------------------------//
-
-void Stack_Dtor(Stack * const My_Stack)
-{
-    assert(My_Stack);
 
 #ifdef CANARY_PROTECT
-    free(My_Stack->canary_left_data);
+static void Make_Canary_Protect(Stack * const my_stack, char * alloc_mem)
+{
+    my_stack->canary_left_data = (canary_t *) (alloc_mem);
 
-    My_Stack->canary_left_data = nullptr;
+    my_stack->data = (elem_t *) (alloc_mem + sizeof(canary_t));
 
-    My_Stack->canary_right_data = nullptr;
-#else
-    free(My_Stack->data);
+    if (my_stack->capacity % sizeof(canary_t) == 0)
+        my_stack->canary_right_data = (canary_t *) (alloc_mem + sizeof(canary_t) + my_stack->capacity * sizeof(elem_t));
+    else
+        my_stack->canary_right_data = (canary_t *) (alloc_mem + sizeof(canary_t) + my_stack->capacity * sizeof(elem_t) + 
+        (sizeof(canary_t) - (my_stack->capacity % sizeof(canary_t))) * sizeof(elem_t));
+
+    *(my_stack->canary_left_data)  = Canary_Value;
+
+    *(my_stack->canary_right_data) = Canary_Value;
+}
 #endif
-    My_Stack->capacity = 0;
 
-    My_Stack->size = 0;
+//---------------------------------------------------------------------------------------------//
 
-    My_Stack->data = nullptr;
+int Stack_Dtor(Stack * const my_stack)
+{
+    assert(my_stack);
+
+#ifdef CANARY_PROTECT
+    free(my_stack->canary_left_data);
+
+    my_stack->canary_left_data  = nullptr;
+
+    my_stack->canary_right_data = nullptr;
+#else
+    free(my_stack->data);
+#endif
+    my_stack->capacity = 0;
+    my_stack->size     = 0;
+    my_stack->data     = nullptr;
+
+    return No_Err;
 }

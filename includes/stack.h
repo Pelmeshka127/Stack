@@ -7,6 +7,11 @@
 
 #define HASH_PROTECT
 
+enum MODES {
+    UP_MODE = 1,
+    LOW_MODE = 2,
+};
+
 //---------------------------------------------------------------------------------------------//
 
 #ifdef CANARY_PROTECT
@@ -49,36 +54,39 @@ struct Stack
     #ifdef CANARY_PROTECT
         canary_t canary_right = Canary_Value;
     #endif
+
+    int error;
 };
 
 //---------------------------------------------------------------------------------------------//
 
 /// @brief Function initializes Stack
-/// @param My_Stack is ptr on struct Stack
+/// @param my_stack is ptr on struct Stack
 /// @param capacity is the value that will be the capacity of Stack
 /// @return Alloc_Err if calloc fell down or No_Error if it's OK
-int Stack_Ctor(Stack * const My_Stack); // (..., const size_t capacity = DEFAULT_CAPACITY)
+int Stack_Ctor(Stack * const my_stack);
 
 //---------------------------------------------------------------------------------------------//
 
 /// @brief Function pushes an element into the stack
-/// @param My_Stack is ptr on struct Stack
+/// @param my_stack is ptr on struct Stack
 /// @param n is an element that will be pushed into the stack
 /// @return Alloc_Err if calloc fell down or No_Error if it's OK
-int Stack_Push(Stack * const My_Stack, const int value);
+int Stack_Push(Stack * const my_stack, const int value);
 
 //---------------------------------------------------------------------------------------------//
 
 /// @brief Function reduces the size of stack
-/// @param My_Stack is ptr on struct Stack
+/// @param my_stack is ptr on struct Stack
 /// @return Stack_Underflow if size = 0 or the last elem from stack if it's OK
-int Stack_Pop(Stack * const My_Stack);
+elem_t Stack_Pop(Stack * const my_stack);
 
 //---------------------------------------------------------------------------------------------//
 
 /// @brief Free allocated memory
-/// @param My_Stack is ptr on struct Stack
-void Stack_Dtor(Stack * const My_Stack);
+/// @param my_stack is ptr on struct Stack
+/// @return 
+int Stack_Dtor(Stack * const my_stack);
 
 //---------------------------------------------------------------------------------------------//
 

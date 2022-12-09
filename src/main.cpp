@@ -4,39 +4,35 @@
 #include <errno.h>
 #include <ctype.h>
 
-#include "stack.h"
-#include "debug.h"
-#include "log.h"
+#include "../includes/stack.h"
+#include "../includes/debug.h"
+#include "../includes/log.h"
 
 int main(void)
 {
-	Stack My_Stack = {};
+	Stack my_stack = {};
 
 #ifdef USE_LOGS
 	if (Logfile_Ctor() == Logfile_Error)
         return Logfile_Error;
 #endif
 
-    if (Stack_Ctor(&My_Stack) != No_Err)
+    if (Stack_Ctor(&my_stack) != No_Err)
 	{
 		fprintf(stderr, "FAILED THE INITIALIZATION OF STACK\n");
 		return Alloc_Err;
 	}
 
-	Stack_Push(&My_Stack, 1);
-	Stack_Push(&My_Stack, 2);
-	Stack_Push(&My_Stack, 3);
-	Stack_Push(&My_Stack, 2);
+	Stack_Pop(&my_stack);
+	if (my_stack.error != No_Err)
+		return Alloc_Err;
 
-	Stack_Pop(&My_Stack);
-	Stack_Pop(&My_Stack);
-	Stack_Pop(&My_Stack);
 
 #ifdef USE_LOGS
 	Logfile_Dtor();
 #endif
 
-    Stack_Dtor(&My_Stack);
+    Stack_Dtor(&my_stack);
 
 	return 0;
 }
